@@ -1,0 +1,22 @@
+#contents.ytd-rich-grid-row.show {
+  display: flex !important;
+}
+
+#contents.show,
+#chips.show,
+#related.show,
+.ytd-reel-shelf-renderer.show {
+  display: block !important;
+}
+
+#contents,
+#chips,
+#related,
+.ytd-reel-shelf-renderer {
+  display: none !important;
+}
+
+[aria-label="Shorts"],
+[title="Shorts"] {
+  display: none !important;
+}

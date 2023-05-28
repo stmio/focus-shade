@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Focus",
+  "description": "Removes video recommendations and shorts from YouTube",
+  "version": "1.0",
+  "permissions": ["*://*.youtube.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["*://youtube.com/*"],
+      "js": ["yt-focus.js"],
+      "css": ["styles.css"],
+      "run_at": "document_end"
+    }
+  ],
+  "icons": {
+    "32": "icons/icon-32.png",
+    "128": "icons/icon-128.png"
+  }
+}
