@@ -1,0 +1,24 @@
+html {
+  display: flex;
+  justify-content: center;
+  min-width: 12em;
+  min-height: 4em;
+  color: white;
+  background-color: #222;
+}
+
+body {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#status {
+  color: greenyellow;
+  font-weight: bold;
+}
+
+#status.disabled {
+  color: red;
+}

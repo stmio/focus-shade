@@ -1,4 +1,4 @@
-function initPopup() {
+function setStatusText() {
   const statusText = document.getElementById("status");
 
   chrome.storage.local.get(["isEnabled"]).then((result) => {
@@ -25,4 +25,4 @@ function toggle() {
   });
 }
 
-document.addEventListener("DOMContentLoaded", () => initPopup());
+document.addEventListener("DOMContentLoaded", () => setStatusText());

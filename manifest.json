@@ -6,13 +6,13 @@
   "permissions": ["storage"],
   "host_permissions": ["*://*.youtube.com/*"],
   "action": {
-    "default_popup": "popup/toggle.html"
+    "default_popup": "src/popup.html"
   },
   "content_scripts": [
     {
       "matches": ["*://*.youtube.com/*"],
-      "js": ["yt-focus.js"],
-      "css": ["css/styles.css"],
+      "js": ["src/js/focus.js"],
+      "css": ["src/css/styles.css"],
       "run_at": "document_end"
     }
   ],
