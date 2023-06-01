@@ -1,4 +1,5 @@
-#contents.ytd-rich-grid-row.show {
+#contents.ytd-rich-grid-row.show,
+#contents.ytd-rich-shelf-renderer.show {
   display: flex !important;
 }
 
