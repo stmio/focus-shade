@@ -3,12 +3,16 @@
   "name": "YouTube Focus",
   "description": "Removes video recommendations and shorts from YouTube",
   "version": "1.0",
-  "permissions": ["*://*.youtube.com/*"],
+  "permissions": ["storage"],
+  "host_permissions": ["*://*.youtube.com/*"],
+  "action": {
+    "default_popup": "popup/toggle.html"
+  },
   "content_scripts": [
     {
-      "matches": ["*://youtube.com/*"],
+      "matches": ["*://*.youtube.com/*"],
       "js": ["yt-focus.js"],
-      "css": ["styles.css"],
+      "css": ["css/styles.css"],
       "run_at": "document_end"
     }
   ],
