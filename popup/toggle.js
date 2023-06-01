@@ -3,7 +3,7 @@ function initPopup() {
 
   chrome.storage.local.get(["isEnabled"]).then((result) => {
     statusText.textContent = result.isEnabled ? "Enabled" : "Disabled";
-    if (result.isEnabled === false) statusText.classList.add("disabled");
+    if (!result.isEnabled) statusText.classList.add("disabled");
   });
 
   document.getElementById("toggle").addEventListener("click", toggle);
