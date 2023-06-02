@@ -1,7 +1,7 @@
 function setStatusText() {
   const statusText = document.getElementById("status");
 
-  chrome.storage.local.get(["isEnabled"]).then((result) => {
+  chrome.storage.sync.get(["isEnabled"]).then((result) => {
     statusText.textContent = result.isEnabled ? "Enabled" : "Disabled";
     if (!result.isEnabled) statusText.classList.add("disabled");
   });

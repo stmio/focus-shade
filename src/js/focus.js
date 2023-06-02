@@ -41,17 +41,17 @@ function observer() {
 chrome.runtime.onMessage.addListener((data, sender, sendResponse) => {
   if (data.msg === "toggle-focus-mode") {
     enabled = !enabled;
-    chrome.storage.local.set({ isEnabled: enabled });
+    chrome.storage.sync.set({ isEnabled: enabled });
     modifyPage();
   }
 });
 
 let enabled;
-chrome.storage.local.get(["isEnabled"]).then((result) => {
+chrome.storage.sync.get(["isEnabled"]).then((result) => {
   enabled = result.isEnabled;
 });
 
-chrome.storage.local.set({ isEnabled: enabled });
+chrome.storage.sync.set({ isEnabled: enabled });
 
 addLocationObserver(observer);
 observer();
