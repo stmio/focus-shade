@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
-  "name": "YouTube Focus",
-  "description": "Removes video recommendations and shorts from YouTube",
+  "name": "Focus Shade",
+  "description": "Removes video recommendations and shorts from the YouTube homepage",
   "version": "1.0",
   "permissions": ["storage"],
   "host_permissions": ["*://*.youtube.com/*"],

@@ -1,4 +1,4 @@
-# youtube-focus
+# focus-shade
 
 Small chrome extension which removes distractions (recommendations and shorts) from the YouTube homepage.
 
