@@ -20,8 +20,12 @@ function toggle() {
     statusText.classList.remove("disabled");
   }
 
-  chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-    chrome.tabs.sendMessage(tabs[0].id, { msg: "toggle-focus-mode" });
+  chrome.tabs.query({ active: true, currentWindow: true }, async (tabs) => {
+    try {
+      await chrome.tabs.sendMessage(tabs[0].id, { msg: "toggle-focus-mode" });
+    } catch (error) {
+      console.log("Extension only works on the YouTube website!");
+    }
   });
 }
 
