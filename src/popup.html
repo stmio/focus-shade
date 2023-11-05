@@ -5,7 +5,30 @@
     <script src="./js/toggle.js"></script>
   </head>
   <body>
-    <div>Extension currently <span id="status">Enabled</span></div>
+    <div id="title">Focus Shade</div>
+
+    <div>
+      Extension currently
+      <span id="status">Enabled</span>
+    </div>
+    <div class="hide" id="timer">
+      <span id="mins">X</span>
+      minutes remaining
+    </div>
     <button id="toggle">Toggle Extension</button>
+
+    <fieldset id="options">
+      <legend>Session options</legend>
+      <div>
+        <label for="quantity">Enable for (mins):</label>
+        <input
+          type="number"
+          id="session-duration"
+          name="duration"
+          min="1"
+          max="1440"
+        />
+      </div>
+    </fieldset>
   </body>
 </html>

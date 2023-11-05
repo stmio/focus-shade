@@ -1,8 +1,8 @@
 html {
   display: flex;
   justify-content: center;
-  min-width: 12em;
-  min-height: 4em;
+  min-width: 14em;
+  min-height: 6em;
   color: white;
   background-color: #222;
 }
@@ -12,6 +12,42 @@ body {
   flex-flow: column nowrap;
   justify-content: space-around;
   align-items: center;
+  gap: 0.5em;
+}
+
+input,
+button {
+  color: white;
+  border: #333 solid 2px;
+  background-color: #222;
+}
+
+button:hover,
+input:hover {
+  border: orange solid 2px;
+}
+
+button {
+  padding: 0.5em;
+}
+
+.hide {
+  display: none;
+}
+
+#title {
+  font-size: large;
+}
+
+#options {
+  border: #333 solid 2px;
+}
+
+#options > div {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: baseline;
+  gap: 0.75em;
 }
 
 #status {
@@ -21,4 +57,8 @@ body {
 
 #status.disabled {
   color: red;
+}
+
+#timer {
+  margin: 0.5em;
 }
